@@ -1,0 +1,38 @@
+<h1 class="pushLeft">Add a new customer </h1>
+<form class="pushLeft" action="/addcustomer" method="POST">
+<p style="background-color: rgb(29, 150, 219);">
+    <label>Customer Name:</label>
+    <br>
+    <input type="text" name="Name" required autofocus>
+    <br><br>
+    <label> Customer City:</label>
+    <br>
+    <input type="text" name="City" required>
+    <br><br>
+    <label>Customer Age:</label>
+    <br>
+    <input type="number"  name="Age" required>
+    <br><br>
+    <button type="submit">Submit</button>
+    <br>
+    
+</p>
+<div style="color: red;">
+    <h4>
+        you added the following customer:
+
+    </h4>
+    <br>
+
+    {%for i in addedcust%}
+    customer id: {{i[0]}}<br>
+    customer name: {{i[1]}}<br>
+    Customer City: {{i[2]}}<br>
+    Customer Age: {{i[3]}}<br>
+    
+    {%endfor%}
+</div>
+<p>
+    <img src="https://i.pinimg.com/originals/83/ba/61/83ba61d2dd3f7f8b00370b53a7d9415f.jpg" alt="customer">
+</p>
+</form>

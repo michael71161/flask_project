@@ -1,0 +1,30 @@
+<h1 class="pushLeft">find  a  book </h1>
+<div class="pushLeft">
+<form  action="/findbook" method="POST">
+<p style="background-color: rgb(29, 150, 219);">
+    <label>book Name:</label>
+    <br>
+    <input type="text" name="Name" required autofocus>
+    <br><br>
+    <button type="submit">find</button>
+
+</form>
+</p>
+</div>
+<br><br>
+<h2>
+    Your search results
+</h2>
+<br><br>
+<div class="pushLeft" style="color: red; background-color: aqua;">
+    {%for i in book%}
+    book id : {{i[0]}}<br>
+    book name: {{i[1]}}<br>
+    author name : {{i[2]}}<br>
+    year published : {{i[3]}}<br>
+    book type: {{i[4]}}<br>
+    is available: {{i[5]}}
+    {%endfor%}
+</div>
+
+<br>

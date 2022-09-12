@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     {% block head %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} all books{% endblock%}</title>
+     {% endblock%}
+</head>
+<body>
+    <div class = "pushLeft" style="background-color: aqua;">
+        <table>
+            <tr>
+                <th>book ID</th>
+                <th>book name</th>
+                <th>author name</th>
+                <th>year published</th>
+                <th>type</th>
+                <th>is available</th>
+            </tr>
+            {%for book in books%}
+            <tr>
+                <td>{{book[0]}}</td>
+                <td>{{book[1]}}</td>
+                <td>{{book[2]}}</td>
+                <td>{{book[3]}}</td>
+                <td>{{book[4]}}</td>
+                <td>{{book[5]}}</td>
+            </tr>
+            {%endfor%}
+        </table>
+
+    
+
+    </div>
+   
+    <br>
+    
+</body>
+</html>

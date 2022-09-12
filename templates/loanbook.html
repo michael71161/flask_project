@@ -1,0 +1,21 @@
+<h1 class="pushLeft">Loan a book </h1>
+<div class="pushLeft" style="background-color: aqua;">
+    <form action="/loanbook" method="POST">
+        <label>Customer ID:</label>
+        <br>
+        <input type="number" name="customerid" required>
+        <br><br>
+        <label>Book ID:</label>
+        <br>
+        <input type="number" name="bookid" required>
+        <br><br>
+        <label>Loan date:</label>
+        <br>
+        <input type="date" name="loandate" required>
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+<div class="pushLeft">
+    {{res}}
+</div>

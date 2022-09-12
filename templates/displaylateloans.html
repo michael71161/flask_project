@@ -1,0 +1,32 @@
+{%block content%}
+
+<h1 class="pushLeft">Show  late loans</h1>
+<form action="displaylateloans" method="POST">
+
+    <label>Book id:</label>
+    <br>
+    <input name="bookid" type="number" placeholder="id" required autofocus>
+    <br><br>
+    <button type="submit"> late loans</button>
+</form>
+
+<div class="pushLeft">
+    <table>
+        <tr>
+            <th>customer ID</th>
+            <th>book ID</th>
+            <th>loan Date</th>
+        </tr>
+        {%for loan in loans%}
+        <tr>
+            <td>{{loan[0]}}</td>
+            <td>{{loan[1]}}</td>
+            <td>{{loan[2]}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+</div>
+<div class="pushLeft">
+    {{dis}}
+</div>
+{%endblock%}

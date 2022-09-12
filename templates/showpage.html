@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     {% block head %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock%}</title>
+     {% endblock%}
+</head>
+<body>
+    <div style="background-color: aqua;">
+    
+
+    
+
+    </div>
+    {% block content %}
+    {%for customer in customers%}
+     
+     {%endfor%}
+
+
+    
+    <br>
+    <div class = "pushLeft" style="background-color: aqua;">
+        <table>
+            <tr>
+                <th>customer ID</th>
+                <th>customer name</th>
+                <th>customer city</th>
+                <th>customer age</th>
+                
+            </tr>
+            {%for customer in customers%}
+            <tr>
+                <td>{{customer[0]}}</td>
+                <td>{{customer[1]}}</td>
+                <td>{{customer[2]}}</td>
+                <td>{{customer[3]}}</td>
+                
+            </tr>
+            {%endfor%}
+        </table>
+
+    
+
+    </div>
+    {% endblock%}
+    
+</body>
+</html>
